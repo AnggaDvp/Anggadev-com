@@ -2,7 +2,7 @@
 
 Proyek ini adalah website portfolio pribadi untuk Bintang Dwi Anggara, seorang Software Developer. Website ini dirancang dengan gaya modern, estetika *glassmorphism*, fitur interaktif yang mulus, dan dukungan penuh untuk tema Gelap/Terang (Dark Mode Toggle).
 
-## 🚀 Fitur Utama
+## Fitur Utama
 
 - **Estetika Modern & Responsive**: Dirancang menggunakan Tailwind CSS, kompatibel untuk tampilan Desktop, Tablet, maupun Mobile.
 - **Dark/Light Mode Toggle**: Pengguna dapat mengganti tema sesuai kenyamanan mata. Preferensi tema akan disimpan otomatis secara lokal (*local storage*).
@@ -11,7 +11,7 @@ Proyek ini adalah website portfolio pribadi untuk Bintang Dwi Anggara, seorang S
 - **Micro-interactions**: Efek 3D tilt pada gambar profil, efek *glow* saat hover pada *card*, dan transisi warna yang mulus.
 - **Glassmorphism Design**: Menggunakan lapisan transparan dengan *backdrop blur* untuk tampilan *card* dan *navbar*.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **HTML5**: Struktur kerangka utama website.
 - **Tailwind CSS**: Framework CSS *utility-first* untuk styling cepat, konsisten, dan responsif.
@@ -20,7 +20,7 @@ Proyek ini adalah website portfolio pribadi untuk Bintang Dwi Anggara, seorang S
 - **FontAwesome**: Pustaka ikon berbasis vektor.
 - **Google Fonts (Space Grotesk)**: Tipografi modern dengan sentuhan futuristik.
 
-## 📁 Struktur Direktori
+## Struktur Direktori
 
 ```text
 Anggaporto/
@@ -30,7 +30,7 @@ Anggaporto/
 └── README.md        # Dokumentasi teknis proyek
 ```
 
-## ⚙️ Panduan Kustomisasi & Pemeliharaan
+## Panduan Kustomisasi & Pemeliharaan
 
 1. **Mengubah Gambar Profil**
    Gambar profil terintegrasi pada dua bagian: *Hero Section* (lingkaran) dan *About Section* (potret). 
@@ -50,7 +50,7 @@ Anggaporto/
    - Contoh: `data-aos="fade-up"` atau `data-aos-delay="200"`.
    - Anda dapat merujuk ke dokumentasi resmi [AOS Library](https://michalsnik.github.io/aos/).
 
-## 🌐 Pengujian Kompatibilitas
+## Pengujian Kompatibilitas
 
 Website ini sudah diuji untuk kompatibilitas dan performa pada:
 - **Browser**: Google Chrome, Mozilla Firefox, Microsoft Edge, Safari.
