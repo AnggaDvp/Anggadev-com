@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Proyek — Angga.dev</title>
+    <meta name="description" content="Detail proyek dari Bintang DWI Anggara">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#050505',
+                        darkCard: '#0a0a0a',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        body { cursor: none; overflow-x: hidden; transition: background-color 0.5s ease, color 0.5s ease; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f3f4f6; }
+        .dark ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #a855f7; border-radius: 10px; }
+        .cursor-dot, .cursor-outline { position: fixed; top: 0; left: 0; transform: translate(-50%, -50%); border-radius: 50%; z-index: 9999; pointer-events: none; }
+        .cursor-dot { width: 8px; height: 8px; background-color: #a855f7; box-shadow: 0 0 10px #a855f7, 0 0 20px #a855f7; }
+        .cursor-outline { width: 40px; height: 40px; border: 2px solid rgba(168, 85, 247, 0.6); transition: width 0.2s, height 0.2s; }
+        @media (hover: none) and (pointer: coarse) { body { cursor: auto; } .cursor-dot, .cursor-outline { display: none; } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-darkBg dark:text-[#e5e5e5] antialiased selection:bg-purple-500 selection:text-white">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header class="fixed w-full z-50 bg-white/80 dark:bg-[#050505]/80 backdrop-blur-md border-b border-gray-200 dark:border-purple-900/30">
+        <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-bold text-2xl tracking-tight text-gray-900 dark:text-white">Angga<span class="text-purple-600 dark:text-purple-500">.dev</span></a>
+            <a href="index.html#proyek" class="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium text-sm">
+                <i class="fas fa-arrow-left"></i> Kembali
+            </a>
+        </nav>
+    </header>
+
+    <main class="pt-28 pb-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div id="project-detail" class="animate-fade-in">
+                <div class="text-center mb-12">
+                    <span id="project-category" class="px-4 py-1.5 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 text-sm font-bold tracking-widest uppercase"></span>
+                    <h1 id="project-title" class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-6 mb-4"></h1>
+                    <p id="project-description" class="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto"></p>
+                </div>
+
+                <div class="glass-card rounded-3xl overflow-hidden mb-12">
+                    <img id="project-image" src="" alt="" class="w-full h-80 object-cover">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="glass-card rounded-2xl p-8">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                            <i class="fas fa-code text-purple-600"></i> Teknologi
+                        </h3>
+                        <div id="project-tech" class="flex flex-wrap gap-2"></div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-8">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                            <i class="fas fa-link text-purple-600"></i> Tautan
+                        </h3>
+                        <div class="space-y-3">
+                            <a id="project-github" href="#" target="_blank" class="flex items-center gap-3 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition">
+                                <i class="fab fa-github text-xl"></i> GitHub Repository
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="index.html#proyek" class="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-full transition transform hover:-translate-y-1">
+                        <i class="fas fa-arrow-left"></i> Kembali ke Portfolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true });
+
+        const projects = [
+            {
+                id: 'sistem-stok-gudang',
+                title: 'Sistem Stok Gudang',
+                category: 'Inventory',
+                description: 'Aplikasi berbasis web untuk mengelola pergerakan barang secara akurat. Memudahkan pemantauan keluar masuk stok barang di gudang perusahaan secara real-time dan meminimalisir human error.',
+                image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                tech: ['Laravel', 'MySQL', 'JavaScript', 'Bootstrap'],
+                github: 'https://github.com/BINTANGDWIANGGARA/Mandev-project'
+            },
+            {
+                id: 'sistem-absensi-digital',
+                title: 'Sistem Absensi Digital',
+                category: 'HR & Management',
+                description: 'Platform pintar untuk memonitor kehadiran karyawan secara real-time. Menyederhanakan proses pencatatan, rekapitulasi, dan manajemen laporan bagi divisi HRD.',
+                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                tech: ['PHP Native', 'JavaScript', 'MySQL', 'jQuery'],
+                github: 'https://github.com/BINTANGDWIANGGARA/Maskapai-Project-LSP'
+            },
+            {
+                id: 'dashboard-keuangan',
+                title: 'Dashboard Keuangan & Laporan',
+                category: 'Finance',
+                description: 'Sistem komprehensif yang membantu pencatatan arus kas secara presisi, terintegrasi dengan pembuat laporan otomatis untuk memfasilitasi pengambilan keputusan strategis pimpinan.',
+                image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                tech: ['Laravel', 'MySQL', 'Excel Export', 'Chart.js'],
+                github: 'https://github.com/BINTANGDWIANGGARA/rekap_yuu'
+            },
+            {
+                id: 'sistem-sales-order',
+                title: 'Sistem Sales Order Tersentralisasi',
+                category: 'E-Commerce B2B',
+                description: 'Platform B2B untuk mengelola pesanan penjualan. Membantu tim sales mempercepat proses transaksi, memonitor status order, dan mengorganisir data pelanggan di satu tempat.',
+                image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                tech: ['PHP', 'MySQL', 'Sales API', 'JavaScript'],
+                github: 'https://github.com/BINTANGDWIANGGARA/Anggaportofolio'
+            }
+        ];
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('id');
+
+        const project = projects.find(p => p.id === projectId);
+
+        if (project) {
+            document.getElementById('project-title').textContent = project.title;
+            document.getElementById('project-category').textContent = project.category;
+            document.getElementById('project-description').textContent = project.description;
+            document.getElementById('project-image').src = project.image;
+            document.getElementById('project-image').alt = project.title;
+            document.getElementById('project-github').href = project.github;
+
+            const techContainer = document.getElementById('project-tech');
+            project.tech.forEach(t => {
+                const span = document.createElement('span');
+                span.className = 'px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 text-xs rounded-full font-medium';
+                span.textContent = t;
+                techContainer.appendChild(span);
+            });
+        } else {
+            document.getElementById('project-detail').innerHTML = `
+                <div class="text-center py-20">
+                    <i class="fas fa-folder-open text-6xl text-gray-300 dark:text-gray-700 mb-6"></i>
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Proyek Tidak Ditemukan</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8">Proyek yang Anda cari tidak tersedia.</p>
+                    <a href="index.html#proyek" class="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-full transition">
+                        <i class="fas fa-arrow-left"></i> Kembali ke Portfolio
+                    </a>
+                </div>
+            `;
+        }
+
+        if (window.matchMedia("(pointer: fine)").matches) {
+            window.addEventListener('mousemove', function(e) {
+                const cursorDot = document.querySelector('.cursor-dot');
+                const cursorOutline = document.querySelector('.cursor-outline');
+                cursorDot.style.left = `${e.clientX}px`;
+                cursorDot.style.top = `${e.clientY}px`;
+                cursorOutline.animate({ left: `${e.clientX}px`, top: `${e.clientY}px` }, { duration: 500, fill: "forwards" });
+            });
+        }
+    </script>
+</body>
+</html>

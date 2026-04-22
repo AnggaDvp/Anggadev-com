@@ -163,19 +163,62 @@
                     <div class="flex-shrink-0" data-aos="fade-down">
                         <a href="#" aria-label="Beranda" class="font-bold text-2xl tracking-tight text-gray-900 dark:text-white">Angga<span class="text-purple-600 dark:text-purple-500 animate-pulse">.dev</span></a>
                     </div>
+                    
+                    <!-- Desktop Navigation -->
                     <div class="hidden md:flex items-center space-x-8" data-aos="fade-down" data-aos-delay="100">
-                        <a href="#hero" class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium text-sm tracking-wide">Beranda</a>
-                        <a href="#tentang" class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium text-sm tracking-wide">Tentang</a>
-                        <a href="#keahlian" class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium text-sm tracking-wide">Keahlian</a>
-                        <a href="#proyek" class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium text-sm tracking-wide">Proyek</a>
-                        <a href="#testimoni" class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium text-sm tracking-wide">Klien</a>
-                        <a href="#kontak" class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium text-sm tracking-wide">Kontak</a>
+                        <a href="#hero" data-t="nav-home" class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium text-sm tracking-wide">Beranda</a>
+                        <a href="#tentang" data-t="nav-about" class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium text-sm tracking-wide">Tentang</a>
+                        <a href="#keahlian" data-t="nav-skills" class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium text-sm tracking-wide">Keahlian</a>
+                        <a href="#proyek" data-t="nav-projects" class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium text-sm tracking-wide">Proyek</a>
+                        <a href="#blog" data-t="nav-blog" class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium text-sm tracking-wide">Blog</a>
+                        <a href="#kontak" data-t="nav-contact" class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition font-medium text-sm tracking-wide">Kontak</a>
                         
+                        <!-- Language Toggle -->
+                        <button id="lang-toggle" class="flex items-center gap-1 px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs font-bold text-gray-600 dark:text-gray-400 hover:bg-purple-100 dark:hover:bg-gray-700 transition" aria-label="Toggle Language">
+                            <span id="lang-text">ID</span>
+                            <i class="fas fa-globe"></i>
+                        </button>
+
                         <!-- Dark Mode Toggle -->
                         <button id="theme-toggle" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-yellow-400 hover:bg-purple-100 dark:hover:bg-gray-700 transition shadow-inner animate-bounce" aria-label="Toggle Dark Mode">
                             <i class="fas fa-moon dark:hidden text-purple-600"></i>
                             <i class="fas fa-sun hidden dark:block"></i>
                         </button>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-purple-100 dark:hover:bg-gray-700 transition" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Overlay -->
+            <div id="mobile-menu" class="md:hidden fixed inset-0 bg-white dark:bg-[#050505] z-40 transform translate-x-full transition-transform duration-300 ease-in-out">
+                <div class="flex flex-col h-full">
+                    <div class="flex justify-between items-center h-20 px-4 border-b border-gray-200 dark:border-purple-900/30">
+                        <a href="#" aria-label="Beranda" class="font-bold text-2xl tracking-tight text-gray-900 dark:text-white">Angga<span class="text-purple-600 dark:text-purple-500">.dev</span></a>
+                        <button id="mobile-menu-close" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400" aria-label="Close Menu">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center justify-center flex-1 space-y-6">
+                        <a href="#hero" class="text-2xl font-bold text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition" data-mobile-link>Beranda</a>
+                        <a href="#tentang" class="text-2xl font-bold text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition" data-mobile-link>Tentang</a>
+                        <a href="#keahlian" class="text-2xl font-bold text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition" data-mobile-link>Keahlian</a>
+                        <a href="#proyek" class="text-2xl font-bold text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition" data-mobile-link>Proyek</a>
+                        <a href="#blog" class="text-2xl font-bold text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition" data-mobile-link>Blog</a>
+                        <a href="#kontak" class="text-2xl font-bold text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition" data-mobile-link>Kontak</a>
+                        <div class="flex items-center gap-4 pt-6 border-t border-gray-200 dark:border-gray-700">
+                            <button id="lang-toggle-mobile" class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-sm font-bold text-gray-600 dark:text-gray-400" aria-label="Toggle Language">
+                                <span id="lang-text-mobile">ID</span>
+                                <i class="fas fa-globe"></i>
+                            </button>
+                            <button id="theme-toggle-mobile" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-yellow-400" aria-label="Toggle Dark Mode">
+                                <i class="fas fa-moon dark:hidden text-purple-600"></i>
+                                <i class="fas fa-sun hidden dark:block"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -205,19 +248,19 @@
                 Data & <span class="gradient-text drop-shadow-md dark:drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]">Digital Marketing</span>.
             </h1>
             
-            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="300">
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="300" data-t="hero-subtitle">
                 Saya Bintang Dwi Anggara. Saya tidak sekadar menulis kode, saya mengubah kebutuhan bisnis Anda menjadi sistem operasional yang efisien, terstruktur, dan berbasis data.
             </p>
             
             <div class="flex flex-wrap justify-center gap-6" data-aos="fade-up" data-aos-delay="400">
                 <a href="#kontak" aria-label="Mulai Kolaborasi" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-10 rounded-full bp-glow transition transform hover:-translate-y-1 hover:scale-105 shadow-lg flex items-center gap-2 text-sm md:text-base">
-                    Mulai Kolaborasi <i class="fas fa-rocket"></i>
+                    <span data-t="hero-cta">Mulai Kolaborasi</span> <i class="fas fa-rocket"></i>
                 </a>
                 <a href="../Picture/cv.pdf" download="CV_Bintang_Dwi_Anggara.pdf" aria-label="Download CV" class="bg-white dark:bg-transparent hover:bg-gray-50 dark:hover:bg-[#111] text-gray-900 dark:text-gray-300 border border-gray-300 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-500 font-bold py-4 px-10 rounded-full transition transform hover:-translate-y-1 hover:text-purple-600 dark:hover:text-purple-400 shadow-sm flex items-center gap-2 text-sm md:text-base">
-                    Download CV <i class="fas fa-download"></i>
+                    <span data-t="hero-cv">Download CV</span> <i class="fas fa-download"></i>
                 </a>
                 <a href="#proyek" aria-label="Eksplorasi Proyek" class="w-full md:w-auto text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 font-bold py-2 px-4 transition flex items-center justify-center gap-2 text-sm">
-                    Eksplorasi Proyek <i class="fas fa-arrow-down"></i>
+                    <span data-t="hero-explore">Eksplorasi Proyek</span> <i class="fas fa-arrow-down"></i>
                 </a>
             </div>
         </section>
@@ -302,8 +345,7 @@
                             <p class="text-gray-600 dark:text-gray-400 mb-8 text-sm leading-relaxed flex-1">Aplikasi berbasis web untuk mengelola pergerakan barang secara akurat. Memudahkan pemantauan keluar masuk stok barang di gudang perusahaan secara *real-time* dan meminimalisir *human error*.</p>
                             
                             <div class="flex gap-4 mt-auto">
-                                <a href="#" aria-label="Live Demo Sistem Stok" class="flex-1 text-center bg-purple-600 text-white py-3 rounded-xl text-sm font-bold hover:bg-purple-700 dark:hover:bg-purple-500 shadow-md transition transform hover:-translate-y-1">Live Demo</a>
-                                <a href="#" aria-label="Detail Source Code" class="flex-1 text-center bg-gray-100 dark:bg-[#1a1a1a] text-gray-700 dark:text-gray-300 py-3 rounded-xl text-sm font-bold hover:bg-gray-200 dark:hover:bg-gray-800 transition transform hover:-translate-y-1">Detail</a>
+                                <a href="detail.html?id=sistem-stok-gudang" aria-label="Detail Sistem Stok" class="flex-1 text-center bg-purple-600 text-white py-3 rounded-xl text-sm font-bold hover:bg-purple-700 dark:hover:bg-purple-500 shadow-md transition transform hover:-translate-y-1">Detail</a>
                             </div>
                         </div>
                     </article>
@@ -329,8 +371,7 @@
                             <p class="text-gray-600 dark:text-gray-400 mb-8 text-sm leading-relaxed flex-1">Platform pintar untuk memonitor kehadiran karyawan secara real-time. Menyederhanakan proses pencatatan, rekapitulasi, dan manajemen laporan bagi divisi HRD.</p>
                             
                             <div class="flex gap-4 mt-auto">
-                                <a href="#" aria-label="Live Demo Absensi" class="flex-1 text-center bg-purple-600 text-white py-3 rounded-xl text-sm font-bold hover:bg-purple-700 dark:hover:bg-purple-500 shadow-md transition transform hover:-translate-y-1">Live Demo</a>
-                                <a href="#" aria-label="Detail Source Code" class="flex-1 text-center bg-gray-100 dark:bg-[#1a1a1a] text-gray-700 dark:text-gray-300 py-3 rounded-xl text-sm font-bold hover:bg-gray-200 dark:hover:bg-gray-800 transition transform hover:-translate-y-1">Detail</a>
+                                <a href="detail.html?id=sistem-absensi-digital" aria-label="Detail Sistem Absensi" class="flex-1 text-center bg-purple-600 text-white py-3 rounded-xl text-sm font-bold hover:bg-purple-700 dark:hover:bg-purple-500 shadow-md transition transform hover:-translate-y-1">Detail</a>
                             </div>
                         </div>
                     </article>
@@ -356,8 +397,7 @@
                             <p class="text-gray-600 dark:text-gray-400 mb-8 text-sm leading-relaxed flex-1">Sistem komprehensif yang membantu pencatatan arus kas secara presisi, terintegrasi dengan pembuat laporan otomatis untuk memfasilitasi pengambilan keputusan strategis pimpinan.</p>
                             
                             <div class="flex gap-4 mt-auto">
-                                <a href="#" class="flex-1 text-center bg-purple-600 text-white py-3 rounded-xl text-sm font-bold hover:bg-purple-700 dark:hover:bg-purple-500 shadow-md transition transform hover:-translate-y-1">Live Demo</a>
-                                <a href="#" class="flex-1 text-center bg-gray-100 dark:bg-[#1a1a1a] text-gray-700 dark:text-gray-300 py-3 rounded-xl text-sm font-bold hover:bg-gray-200 dark:hover:bg-gray-800 transition transform hover:-translate-y-1">Detail</a>
+                                <a href="detail.html?id=dashboard-keuangan" class="flex-1 text-center bg-purple-600 text-white py-3 rounded-xl text-sm font-bold hover:bg-purple-700 dark:hover:bg-purple-500 shadow-md transition transform hover:-translate-y-1">Detail</a>
                             </div>
                         </div>
                     </article>
@@ -383,8 +423,7 @@
                             <p class="text-gray-600 dark:text-gray-400 mb-8 text-sm leading-relaxed flex-1">Platform B2B untuk mengelola pesanan penjualan. Membantu tim sales mempercepat proses transaksi, memonitor status order, dan mengorganisir data pelanggan di satu tempat.</p>
                             
                             <div class="flex gap-4 mt-auto">
-                                <a href="#" class="flex-1 text-center bg-purple-600 text-white py-3 rounded-xl text-sm font-bold hover:bg-purple-700 dark:hover:bg-purple-500 shadow-md transition transform hover:-translate-y-1">Live Demo</a>
-                                <a href="#" class="flex-1 text-center bg-gray-100 dark:bg-[#1a1a1a] text-gray-700 dark:text-gray-300 py-3 rounded-xl text-sm font-bold hover:bg-gray-200 dark:hover:bg-gray-800 transition transform hover:-translate-y-1">Detail</a>
+                                <a href="detail.html?id=sistem-sales-order" class="flex-1 text-center bg-purple-600 text-white py-3 rounded-xl text-sm font-bold hover:bg-purple-700 dark:hover:bg-purple-500 shadow-md transition transform hover:-translate-y-1">Detail</a>
                             </div>
                         </div>
                     </article>
@@ -392,62 +431,121 @@
             </div>
         </section>
 
-        <!-- Testimoni Pelanggan -->
-        <section id="testimoni" class="py-24 bg-white dark:bg-darkCard border-y border-gray-200 dark:border-purple-900/20 transition-colors duration-300">
+        <!-- Blog / Artikel Section -->
+        <section id="blog" class="py-24 bg-white dark:bg-darkCard border-y border-gray-200 dark:border-purple-900/20 transition-colors duration-300">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-                    <span class="px-4 py-1.5 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 text-sm font-bold tracking-widest uppercase mb-6 inline-block">Testimoni</span>
-                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">Apa Kata <span class="text-purple-600 dark:text-purple-500">Klien</span></h2>
-                    <p class="text-gray-600 dark:text-gray-400">Kepercayaan dan kepuasan pengguna adalah ukuran keberhasilan dari setiap baris kode yang saya tulis.</p>
+                    <span class="px-4 py-1.5 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 text-sm font-bold tracking-widest uppercase mb-6 inline-block">Insights</span>
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6" data-t="blog-title">Blog & Artikel</h2>
+                    <p class="text-gray-600 dark:text-gray-400" data-t="blog-desc">Berbagi pemikiran tentang teknologi, pengembangan sistem, dan strategi digital untuk bisnis masa kini.</p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Testi 1 -->
-                    <div class="glass-card rounded-2xl p-8 relative hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
-                        <i class="fas fa-quote-right text-5xl text-purple-100 dark:text-purple-900/40 absolute top-6 right-6"></i>
-                        <div class="flex items-center gap-4 mb-6">
-                            <img src="https://ui-avatars.com/api/?name=Bapak+Hasan&background=6b21a8&color=fff" alt="Client 1" loading="lazy" class="w-14 h-14 rounded-full shadow-md border-2 border-white dark:border-[#111]">
-                            <div>
-                                <h4 class="font-bold text-gray-900 dark:text-white">Bpk. Hasan</h4>
-                                <p class="text-xs text-gray-500 dark:text-gray-400">Manager Operasional</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog 1 -->
+                    <article class="glass-card rounded-2xl overflow-hidden group flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Blog post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 bg-purple-600 text-white text-[10px] font-bold rounded-full uppercase">Technology</span>
                             </div>
                         </div>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed italic">"Sistem stok gudang yang dibangun oleh Bintang sangat intuitif. Error pencatatan manual kami turun drastis, dan efisiensi operasional harian kami meningkat signifikan sejak bulan pertama."</p>
-                        <div class="mt-6 text-yellow-400 text-sm flex gap-1">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
+                                <span>22 April 2026</span>
+                                <span>•</span>
+                                <span>5 min read</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 transition">Membangun Ekosistem E-commerce yang Scalable</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-1">Bagaimana merancang arsitektur web yang mampu menangani ribuan transaksi tanpa kendala performa...</p>
+                            <a href="blog-detail.html?id=ecommerce-scalable" class="text-purple-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Testi 2 -->
-                    <div class="glass-card rounded-2xl p-8 relative hover:-translate-y-2 transition-transform duration-300 bg-purple-50 dark:bg-[#111]" data-aos="fade-up" data-aos-delay="200">
-                        <i class="fas fa-quote-right text-5xl text-purple-200 dark:text-purple-900/40 absolute top-6 right-6"></i>
-                        <div class="flex items-center gap-4 mb-6">
-                            <img src="https://ui-avatars.com/api/?name=Ibu+Diana&background=a855f7&color=fff" alt="Client 2" loading="lazy" class="w-14 h-14 rounded-full shadow-md border-2 border-white dark:border-[#111]">
-                            <div>
-                                <h4 class="font-bold text-gray-900 dark:text-white">Ibu Diana</h4>
-                                <p class="text-xs text-gray-500 dark:text-gray-400">Kepala Divisi HRD</p>
+                    <!-- Blog 2 -->
+                    <article class="glass-card rounded-2xl overflow-hidden group flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Blog post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 bg-indigo-600 text-white text-[10px] font-bold rounded-full uppercase">Data Analysis</span>
                             </div>
                         </div>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed italic">"Aplikasi absensi ini memudahkan saya melakukan rekapitulasi akhir bulan. UI/UX-nya bersih dan mudah dimengerti bahkan oleh karyawan yang tidak terlalu paham teknologi."</p>
-                        <div class="mt-6 text-yellow-400 text-sm flex gap-1">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
+                                <span>15 April 2026</span>
+                                <span>•</span>
+                                <span>8 min read</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 transition">Pentingnya Data Inventory untuk Prediksi Stok</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-1">Menggunakan data historis untuk menghindari penumpukan stok atau kekurangan barang di gudang...</p>
+                            <a href="blog-detail.html?id=data-inventory-prediction" class="text-purple-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Testi 3 -->
-                    <div class="glass-card rounded-2xl p-8 relative hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
-                        <i class="fas fa-quote-right text-5xl text-purple-100 dark:text-purple-900/40 absolute top-6 right-6"></i>
-                        <div class="flex items-center gap-4 mb-6">
-                            <img src="https://ui-avatars.com/api/?name=Andi+W&background=3b82f6&color=fff" alt="Client 3" loading="lazy" class="w-14 h-14 rounded-full shadow-md border-2 border-white dark:border-[#111]">
-                            <div>
-                                <h4 class="font-bold text-gray-900 dark:text-white">Andi W.</h4>
-                                <p class="text-xs text-gray-500 dark:text-gray-400">Direktur Keuangan</p>
+                    <!-- Blog 3 -->
+                    <article class="glass-card rounded-2xl overflow-hidden group flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Blog post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 bg-blue-600 text-white text-[10px] font-bold rounded-full uppercase">Digital Marketing</span>
                             </div>
                         </div>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed italic">"Modul ekspor laporan Excel dan dashboard analisis keuangannya sangat rapi. Bintang benar-benar paham bagaimana menerjemahkan alur bisnis yang rumit ke dalam sistem yang *scalable*."</p>
-                        <div class="mt-6 text-yellow-400 text-sm flex gap-1">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
+                                <span>10 April 2026</span>
+                                <span>•</span>
+                                <span>6 min read</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 transition">Strategi Marketplace untuk Brand Lokal</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-1">Tips mengoptimalkan visibilitas toko di berbagai platform marketplace untuk meningkatkan konversi...</p>
+                            <a href="blog-detail.html?id=marketplace-brand-lokal" class="text-purple-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
                         </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sertifikat Section -->
+        <section id="certificate" class="py-24 bg-gray-50 dark:bg-darkBg relative transition-colors duration-300">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16" data-aos="fade-up">
+                    <div class="max-w-2xl">
+                        <h2 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4" data-t="cert-title">Sertifikasi & Kompetensi</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg" data-t="cert-desc">Validasi keahlian teknis dan profesional melalui lembaga terakreditasi.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Cert 1 -->
+                    <div class="glass-card p-6 rounded-2xl text-center group" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center text-purple-600 dark:text-purple-400 mx-auto mb-6 group-hover:scale-110 transition">
+                            <i class="fas fa-certificate text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 dark:text-white mb-2">Laravel Developer</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">BNSP Indonesia</p>
+                    </div>
+                    <!-- Cert 2 -->
+                    <div class="glass-card p-6 rounded-2xl text-center group" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 mx-auto mb-6 group-hover:scale-110 transition">
+                            <i class="fas fa-code text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 dark:text-white mb-2">Web Programming</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">Dicoding Academy</p>
+                    </div>
+                    <!-- Cert 3 -->
+                    <div class="glass-card p-6 rounded-2xl text-center group" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-green-600 dark:text-green-400 mx-auto mb-6 group-hover:scale-110 transition">
+                            <i class="fas fa-chart-line text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 dark:text-white mb-2">Digital Marketing</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">Google Digital Garage</p>
+                    </div>
+                    <!-- Cert 4 -->
+                    <div class="glass-card p-6 rounded-2xl text-center group" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="w-16 h-16 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center text-yellow-600 dark:text-yellow-400 mx-auto mb-6 group-hover:scale-110 transition">
+                            <i class="fas fa-database text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 dark:text-white mb-2">Data Analytics</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">Coursera - IBM</p>
                     </div>
                 </div>
             </div>
@@ -538,7 +636,7 @@
     <footer class="bg-white dark:bg-darkCard py-12 border-t border-gray-200 dark:border-purple-900/30 text-center relative overflow-hidden transition-colors duration-300">
         <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[100px] bg-purple-400/10 dark:bg-purple-600/20 blur-[80px]"></div>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <a href="#" aria-label="Back to Top" class="font-bold text-3xl tracking-tight text-gray-900 dark:text-white mb-6 inline-block">Bintang<span class="text-purple-600 dark:text-purple-500">.</span></a>
+            <a href="#" aria-label="Back to Top" class="font-bold text-3xl tracking-tight text-gray-900 dark:text-white mb-6 inline-block">Angga<span class="text-purple-600 dark:text-purple-500">.dev</span></a>
             
             <!-- Social Links -->
             <div class="flex justify-center gap-6 mb-10">
@@ -672,6 +770,111 @@
         if(contactForm) {
             contactForm.addEventListener('submit', (e) => {
                 e.preventDefault();
+            });
+        }
+
+        // --- 5. Multi-language Logic ---
+        const langToggle = document.getElementById('lang-toggle');
+        const langText = document.getElementById('lang-text');
+        let currentLang = localStorage.getItem('lang') || 'id';
+
+        const translations = {
+            'id': {
+                'nav-home': 'Beranda',
+                'nav-about': 'Tentang',
+                'nav-skills': 'Keahlian',
+                'nav-projects': 'Proyek',
+                'nav-blog': 'Blog',
+                'nav-contact': 'Kontak',
+                'hero-subtitle': 'Saya Bintang Dwi Anggara. Saya tidak sekadar menulis kode, saya mengubah kebutuhan bisnis Anda menjadi sistem operasional yang efisien, terstruktur, dan berbasis data.',
+                'hero-cta': 'Mulai Kolaborasi',
+                'hero-cv': 'Download CV',
+                'hero-explore': 'Eksplorasi Proyek',
+                'blog-title': 'Blog & Artikel',
+                'blog-desc': 'Berbagi pemikiran tentang teknologi, pengembangan sistem, dan strategi digital untuk bisnis masa kini.',
+                'cert-title': 'Sertifikasi & Kompetensi',
+                'cert-desc': 'Validasi keahlian teknis dan profesional melalui lembaga terakreditasi.'
+            },
+            'en': {
+                'nav-home': 'Home',
+                'nav-about': 'About',
+                'nav-skills': 'Skills',
+                'nav-projects': 'Projects',
+                'nav-blog': 'Blog',
+                'nav-contact': 'Contact',
+                'hero-subtitle': "I'm Bintang Dwi Anggara. I don't just write code; I transform your business needs into efficient, structured, and data-driven operational systems.",
+                'hero-cta': 'Start Collaboration',
+                'hero-cv': 'Download CV',
+                'hero-explore': 'Explore Projects',
+                'blog-title': 'Blog & Articles',
+                'blog-desc': 'Sharing thoughts on technology, system development, and digital strategies for modern business.',
+                'cert-title': 'Certifications & Competencies',
+                'cert-desc': 'Validation of technical and professional expertise through accredited institutions.'
+            }
+        };
+
+        const updateLanguage = (lang) => {
+            document.querySelectorAll('[data-t]').forEach(el => {
+                const key = el.getAttribute('data-t');
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            langText.textContent = lang.toUpperCase();
+            localStorage.setItem('lang', lang);
+            document.documentElement.lang = lang;
+        };
+
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'id' ? 'en' : 'id';
+            updateLanguage(currentLang);
+        });
+
+        // Initialize language
+        updateLanguage(currentLang);
+
+        // --- 6. Mobile Menu Logic ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('[data-mobile-link]');
+        const langToggleMobile = document.getElementById('lang-toggle-mobile');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        const langTextMobile = document.getElementById('lang-text-mobile');
+
+        const openMobileMenu = () => {
+            mobileMenu.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeMobileMenu = () => {
+            mobileMenu.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+        };
+
+        if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
+        if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileMenu);
+        
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        if (langToggleMobile) {
+            langToggleMobile.addEventListener('click', () => {
+                currentLang = currentLang === 'id' ? 'en' : 'id';
+                updateLanguage(currentLang);
+                langTextMobile.textContent = currentLang.toUpperCase();
+            });
+        }
+
+        if (themeToggleMobile) {
+            themeToggleMobile.addEventListener('click', () => {
+                html.classList.toggle('dark');
+                if (html.classList.contains('dark')) {
+                    localStorage.theme = 'dark';
+                } else {
+                    localStorage.theme = 'light';
+                }
             });
         }
     </script>
