@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
   const projects = [
@@ -88,7 +89,7 @@ const Projects = () => {
                 <p className="text-gray-600 dark:text-gray-400 mb-8 text-sm leading-relaxed flex-1">{project.desc}</p>
                 
                 <div className="flex gap-4 mt-auto">
-                  <a href={`/detail/${project.id}`} className="flex-1 text-center bg-purple-600 text-white py-3 rounded-xl text-sm font-bold hover:bg-purple-700 dark:hover:bg-purple-500 shadow-md transition transform hover:-translate-y-1">Detail</a>
+                  <Link to={`/detail/${project.id}`} className="flex-1 text-center bg-purple-600 text-white py-3 rounded-xl text-sm font-bold hover:bg-purple-700 dark:hover:bg-purple-500 shadow-md transition transform hover:-translate-y-1">Detail</Link>
                 </div>
               </div>
             </article>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Blog = ({ translations, currentLang }) => {
   const blogPosts = [
@@ -21,7 +22,7 @@ const Blog = ({ translations, currentLang }) => {
       excerpt: 'Menggunakan data historis untuk menghindari penumpukan stok atau kekurangan barang di gudang...'
     },
     {
-      id: 'marketplace-strategy',
+      id: 'marketplace-brand-lokal',
       title: 'Strategi Marketplace untuk Brand Lokal',
       date: '10 April 2026',
       readTime: '6 min read',
@@ -61,9 +62,9 @@ const Blog = ({ translations, currentLang }) => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 transition">{post.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-1">{post.excerpt}</p>
-                <a href={`/blog/${post.id}`} className="text-purple-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                <Link to={`/blog/${post.id}`} className="text-purple-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
                   Baca Selengkapnya <i className="fas fa-arrow-right"></i>
-                </a>
+                </Link>
               </div>
             </article>
           ))}

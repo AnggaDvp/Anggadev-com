@@ -9,6 +9,8 @@ import Projects from './components/Projects';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ProjectDetail from './pages/ProjectDetail';
+import BlogDetail from './pages/BlogDetail';
 
 const translations = {
   'id': {
@@ -68,8 +70,8 @@ function App() {
             </main>
           } />
           {/* Add more routes for detail pages if needed */}
-          <Route path="/detail/:id" element={<div>Detail Page Placeholder</div>} />
-          <Route path="/blog/:id" element={<div>Blog Detail Placeholder</div>} />
+          <Route path="/detail/:id" element={<ProjectDetail />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
         </Routes>
 
         <Footer />
