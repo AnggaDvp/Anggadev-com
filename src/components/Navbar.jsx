@@ -148,7 +148,7 @@ const Navbar = ({ currentLang, toggleLanguage, translations }) => {
         >
           {/* Backdrop Overlay */}
           <div 
-            className={`absolute inset-0 bg-black/60 backdrop-blur-md transition-opacity duration-500 ${
+            className={`absolute inset-0 bg-[#0a0a0a]/90 transition-opacity duration-500 ${
               isMenuOpen ? 'opacity-100' : 'opacity-0'
             }`}
             onClick={toggleMenu}
@@ -156,7 +156,7 @@ const Navbar = ({ currentLang, toggleLanguage, translations }) => {
           
           {/* Menu Content */}
           <div
-            className={`absolute right-0 top-0 bottom-0 w-[80%] max-w-sm bg-[#050505]/95 backdrop-blur-2xl border-l border-purple-900/30 transform transition-transform duration-500 ease-in-out ${
+            className={`absolute right-0 top-0 bottom-0 w-[80%] max-w-sm bg-[#0f0f0f] border-l border-purple-900/30 transform transition-transform duration-500 ease-in-out ${
               isMenuOpen ? 'translate-x-0' : 'translate-x-full'
             }`}
           >

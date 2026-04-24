@@ -119,9 +119,6 @@ const Education = ({ translations, currentLang }) => {
                         {translations[currentLang]['exp-intern-company']}
                       </p>
                     </div>
-                    <div className="px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-bold self-start sm:self-center">
-                      2025 - 2026
-                    </div>
                   </div>
                   
                   <p className="text-gray-400 leading-relaxed mb-6">
