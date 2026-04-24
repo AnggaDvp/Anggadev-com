@@ -37,6 +37,7 @@ import Cursor from './components/Cursor';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
@@ -162,6 +163,7 @@ function App() {
             <main>
               <Hero translations={translations} currentLang={currentLang} />
               <About translations={translations} currentLang={currentLang} />
+              <Skills translations={translations} currentLang={currentLang} />
               <Projects translations={translations} currentLang={currentLang} />
               <Blog translations={translations} currentLang={currentLang} />
               <Contact translations={translations} currentLang={currentLang} />
