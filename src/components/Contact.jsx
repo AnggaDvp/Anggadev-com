@@ -67,30 +67,30 @@ const Contact = ({ translations, currentLang }) => {
               <h3 className="text-2xl font-bold text-white mb-6">{translations[currentLang]['contact-info-title']}</h3>
               <div className="space-y-6">
                 <div className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300 shadow-lg shadow-purple-900/20">
-                    <i className="fas fa-envelope"></i>
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300 shadow-lg shadow-purple-900/20">
+                    <i className="fas fa-envelope text-lg md:text-xl"></i>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Email</p>
-                    <p className="text-white font-medium">bintangdwianggara9@gmail.com</p>
+                    <p className="text-xs md:text-sm text-gray-500">{translations[currentLang]['contact-email-label']}</p>
+                    <p className="text-white font-medium text-sm md:text-base">bintangdwianggara9@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300 shadow-lg shadow-purple-900/20">
-                    <i className="fab fa-google text-xl"></i>
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300 shadow-lg shadow-purple-900/20">
+                    <i className="fab fa-google text-lg md:text-xl"></i>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Google / Gmail</p>
-                    <p className="text-white font-medium">bintangdwianggara9@gmail.com</p>
+                    <p className="text-xs md:text-sm text-gray-500">{translations[currentLang]['contact-google-label']}</p>
+                    <p className="text-white font-medium text-sm md:text-base">bintangdwianggara9@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300 shadow-lg shadow-purple-900/20">
-                    <i className="fab fa-whatsapp text-xl"></i>
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300 shadow-lg shadow-purple-900/20">
+                    <i className="fab fa-whatsapp text-lg md:text-xl"></i>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">WhatsApp</p>
-                    <p className="text-white font-medium">+62 813-1537-9958</p>
+                    <p className="text-xs md:text-sm text-gray-500">{translations[currentLang]['contact-whatsapp-label']}</p>
+                    <p className="text-white font-medium text-sm md:text-base">+62 813-1537-9958</p>
                   </div>
                 </div>
               </div>

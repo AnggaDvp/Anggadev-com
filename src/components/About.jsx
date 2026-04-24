@@ -13,15 +13,15 @@ const About = ({ translations, currentLang }) => {
                 <div className="overflow-hidden rounded-xl relative">
                   <img 
                     src="/Picture/coding.jpg" 
-                    alt="Potret Bintang Dwi Anggara" 
+                    alt={translations[currentLang]['about-image-alt']} 
                     loading="lazy" 
                     className="w-full h-[450px] object-cover object-top filter grayscale-[30%] group-hover:grayscale-0 transition duration-700 transform group-hover:scale-105" 
                     onError={(e) => { e.target.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-70 group-hover:opacity-50 transition-opacity"></div>
                   <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="text-2xl font-bold text-white mb-1 drop-shadow-md">Bintang Dwi Anggara</h3>
-                    <p className="text-purple-300 font-medium drop-shadow-md">Fullstack Developer & Digital Strategist</p>
+                    <h3 className="text-2xl font-bold text-white mb-1 drop-shadow-md">{translations[currentLang]['about-name']}</h3>
+                    <p className="text-purple-300 font-medium drop-shadow-md">{translations[currentLang]['about-role']}</p>
                   </div>
                 </div>
               </div>

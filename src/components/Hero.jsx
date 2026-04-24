@@ -27,7 +27,7 @@ const Hero = ({ translations, currentLang }) => {
           <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 to-transparent animate-pulse"></div>
           <img 
             src="/Picture/profil.png" 
-            alt="Foto Bintang Dwi Anggara" 
+            alt={translations[currentLang]['hero-profile-alt']}
             fetchPriority="high" 
             className="w-full h-full rounded-full object-cover border-4 border-[#050505] bg-gray-800 relative z-0" 
             onError={(e) => { e.target.src='https://ui-avatars.com/api/?name=Bintang+Anggara&background=a855f7&color=fff&size=256' }}
@@ -36,8 +36,7 @@ const Hero = ({ translations, currentLang }) => {
       </div>
 
       <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
-        Software Developer, <br className="hidden md:block" />
-        Data & <span className="gradient-text drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]">Digital Marketing</span>.
+        <span className="gradient-text drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]">{translations[currentLang]['hero-role']}</span>.
       </h1>
       
       <p className="text-lg md:text-xl text-gray-400 max-w-3xl mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="300">

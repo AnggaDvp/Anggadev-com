@@ -141,7 +141,7 @@ const Navbar = ({ currentLang, toggleLanguage, translations }) => {
         </div>
 
         <div
-          className={`md:hidden fixed inset-0 bg-[#050505]/95 backdrop-blur-xl z-40 transform ${
+          className={`md:hidden fixed inset-0 bg-black/95 backdrop-blur-2xl z-40 transform ${
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           } transition-transform duration-500 ease-in-out`}
         >
