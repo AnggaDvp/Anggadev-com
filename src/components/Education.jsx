@@ -26,12 +26,12 @@ const Education = ({ translations, currentLang }) => {
             data-aos="fade-right"
           >
             <div className="flex flex-col sm:flex-row gap-6">
-              <div className="w-20 h-20 rounded-2xl bg-white flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl p-2">
+              <div className="w-20 h-20 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl p-2">
                 <img 
                   src="/Picture/smkn1.png" 
                   alt="SMKN 1 Jakarta" 
                   className="w-full h-full object-contain"
-                  onError={(e) => { e.target.parentElement.classList.add('bg-white/5'); e.target.src = 'https://ui-avatars.com/api/?name=SMKN1&background=a855f7&color=fff' }}
+                  onError={(e) => { e.target.src = 'https://ui-avatars.com/api/?name=SMKN1&background=a855f7&color=fff' }}
                 />
               </div>
               <div className="flex-1">
@@ -56,12 +56,12 @@ const Education = ({ translations, currentLang }) => {
             data-aos="fade-left"
           >
             <div className="flex flex-col sm:flex-row gap-6">
-              <div className="w-20 h-20 rounded-2xl bg-white flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl p-2">
+              <div className="w-20 h-20 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl p-2">
                 <img 
                   src="/Picture/rpl.png" 
                   alt="RPL" 
                   className="w-full h-full object-contain"
-                  onError={(e) => { e.target.parentElement.classList.add('bg-purple-500/10'); e.target.src = 'https://ui-avatars.com/api/?name=RPL&background=a855f7&color=fff' }}
+                  onError={(e) => { e.target.src = 'https://ui-avatars.com/api/?name=RPL&background=a855f7&color=fff' }}
                 />
               </div>
               <div className="flex-1">

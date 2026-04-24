@@ -26,12 +26,12 @@ const EducationDetail = ({ translations, currentLang }) => {
             <div className="absolute top-0 right-0 w-64 h-64 bg-purple-600/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
             
             <div className="relative flex flex-col md:flex-row gap-8 items-start">
-              <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-white p-4 flex-shrink-0 flex items-center justify-center border border-white/10 shadow-xl group-hover:scale-105 transition-transform duration-500">
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-4 flex-shrink-0 flex items-center justify-center shadow-xl group-hover:scale-105 transition-transform duration-500">
                 <img 
                   src="/Picture/smkn1.png" 
                   alt="SMKN 1 Jakarta" 
                   className="w-full h-full object-contain"
-                  onError={(e) => { e.target.parentElement.classList.add('bg-white/5'); e.target.src = 'https://ui-avatars.com/api/?name=SMKN1&background=a855f7&color=fff' }}
+                  onError={(e) => { e.target.src = 'https://ui-avatars.com/api/?name=SMKN1&background=a855f7&color=fff' }}
                 />
               </div>
               
@@ -71,12 +71,12 @@ const EducationDetail = ({ translations, currentLang }) => {
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl -ml-32 -mb-32"></div>
             
             <div className="relative flex flex-col md:flex-row gap-8 items-start">
-              <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-white p-4 flex-shrink-0 flex items-center justify-center border border-white/10 shadow-xl group-hover:scale-105 transition-transform duration-500">
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-4 flex-shrink-0 flex items-center justify-center shadow-xl group-hover:scale-105 transition-transform duration-500">
                 <img 
                   src="/Picture/rpl.png" 
                   alt="RPL" 
                   className="w-full h-full object-contain"
-                  onError={(e) => { e.target.parentElement.classList.add('bg-purple-500/10'); e.target.src = 'https://ui-avatars.com/api/?name=RPL&background=a855f7&color=fff' }}
+                  onError={(e) => { e.target.src = 'https://ui-avatars.com/api/?name=RPL&background=a855f7&color=fff' }}
                 />
               </div>
               
