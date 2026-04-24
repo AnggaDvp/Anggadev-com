@@ -79,6 +79,80 @@ const Education = ({ translations, currentLang }) => {
             </div>
           </div>
         </div>
+
+        {/* Experience Section */}
+        <div className="mt-24">
+          <div className="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              {translations[currentLang]['exp-title']}
+            </h2>
+            <p className="text-gray-400">
+              {currentLang === 'id' 
+                ? 'Perjalanan profesional saya di dunia industri.' 
+                : 'My professional journey in the industrial world.'}
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div 
+              className="glass-card p-8 rounded-3xl border border-white/5 hover:border-purple-500/30 transition-all group relative overflow-hidden"
+              data-aos="fade-up"
+            >
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                {/* Company Logo */}
+                <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 flex-shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform shadow-xl p-4 relative z-10">
+                  <img 
+                    src="/Picture/dhimas.png" 
+                    alt="PT Dhimas Mitra Internasional" 
+                    className="w-full h-full object-contain"
+                    onError={(e) => { e.target.src = 'https://ui-avatars.com/api/?name=DMI&background=a855f7&color=fff' }}
+                  />
+                </div>
+
+                <div className="flex-1 relative z-10">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                    <div>
+                      <h3 className="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">
+                        {translations[currentLang]['exp-intern-title']}
+                      </h3>
+                      <p className="text-purple-400 font-medium">
+                        {translations[currentLang]['exp-intern-company']}
+                      </p>
+                    </div>
+                    <div className="px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-bold self-start sm:self-center">
+                      2024 - Present
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-400 leading-relaxed mb-6">
+                    {translations[currentLang]['exp-intern-desc']}
+                  </p>
+
+                  <div className="flex flex-wrap gap-3">
+                    {['Marketplace', 'Website Maintenance', 'Customer Monitoring', 'Data Entry'].map((skill, index) => (
+                      <span key={index} className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-gray-400 text-xs">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a 
+                    href="https://dhimasmitra.co.id/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="mt-8 inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-bold transition-colors group/link"
+                  >
+                    <span>Visit Website</span>
+                    <i className="fas fa-external-link-alt text-sm group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform"></i>
+                  </a>
+                </div>
+              </div>
+
+              {/* Decorative Background Glow */}
+              <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-purple-600/10 rounded-full blur-[100px] pointer-events-none group-hover:bg-purple-600/20 transition-colors"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
