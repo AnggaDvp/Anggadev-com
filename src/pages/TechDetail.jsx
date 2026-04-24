@@ -254,6 +254,7 @@ const TechDetail = ({ currentLang }) => {
       id: 'flutter',
       name: 'Flutter',
       icon: 'fas fa-mobile-alt',
+      tagline: 'Mobile App Framework',
       color: 'text-cyan-500',
       category: 'Mobile Framework',
       description: {
@@ -415,6 +416,7 @@ const TechDetail = ({ currentLang }) => {
         </div>
       </div>
     </div>
+  );
 };
 
 export default TechDetail;
