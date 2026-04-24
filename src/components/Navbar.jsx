@@ -83,7 +83,7 @@ const Navbar = ({ currentLang, toggleLanguage, translations }) => {
       onMouseEnter={() => setIsHovering(true)} 
       onMouseLeave={() => setIsHovering(false)}
     >
-      <nav className={`fixed w-full z-50 bg-[#050505]/80 backdrop-blur-md border-b border-purple-900/30 transition-all duration-500 ${isVisible ? 'top-0' : '-top-24'}`}>
+      <nav className={`fixed w-full z-50 bg-[#050505]/80 backdrop-blur-md border-b border-purple-900/30 transition-all duration-300 ${isVisible || isMenuOpen ? 'top-0' : '-top-24'}`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex-shrink-0" data-aos="fade-down">
@@ -142,13 +142,13 @@ const Navbar = ({ currentLang, toggleLanguage, translations }) => {
         </div>
 
         <div
-          className={`md:hidden fixed inset-0 z-40 transition-all duration-500 ${
+          className={`md:hidden fixed inset-0 z-40 transition-all duration-300 ${
             isMenuOpen ? 'visible' : 'invisible'
           }`}
         >
           {/* Backdrop Overlay */}
           <div 
-            className={`absolute inset-0 bg-[#0a0a0a]/90 transition-opacity duration-500 ${
+            className={`absolute inset-0 bg-[#0a0a0a]/90 transition-opacity duration-300 ${
               isMenuOpen ? 'opacity-100' : 'opacity-0'
             }`}
             onClick={toggleMenu}
@@ -156,7 +156,7 @@ const Navbar = ({ currentLang, toggleLanguage, translations }) => {
           
           {/* Menu Content */}
           <div
-            className={`absolute right-0 top-0 bottom-0 w-[80%] max-w-sm bg-[#0f0f0f] border-l border-purple-900/30 transform transition-transform duration-500 ease-in-out ${
+            className={`absolute right-0 top-0 bottom-0 w-[80%] max-w-sm bg-[#0f0f0f] border-l border-purple-900/30 transform transition-transform duration-300 ease-in-out ${
               isMenuOpen ? 'translate-x-0' : 'translate-x-full'
             }`}
           >

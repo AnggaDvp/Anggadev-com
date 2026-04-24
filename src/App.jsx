@@ -47,6 +47,7 @@ import ProjectDetail from './pages/ProjectDetail';
 import BlogDetail from './pages/BlogDetail';
 import TechDetail from './pages/TechDetail';
 import EducationDetail from './pages/EducationDetail';
+import DhimasDetail from './pages/DhimasDetail';
 
 const translations = {
   'id': {
@@ -208,6 +209,7 @@ function App() {
           <Route path="/blog/:id" element={<BlogDetail translations={translations} currentLang={currentLang} />} />
           <Route path="/tech/:id" element={<TechDetail currentLang={currentLang} />} />
           <Route path="/education" element={<EducationDetail translations={translations} currentLang={currentLang} />} />
+          <Route path="/dhimas-detail" element={<DhimasDetail translations={translations} currentLang={currentLang} />} />
         </Routes>
 
         <Footer translations={translations} currentLang={currentLang} />

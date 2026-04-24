@@ -95,7 +95,8 @@ const Education = ({ translations, currentLang }) => {
 
           <div className="max-w-4xl mx-auto">
             <div 
-              className="glass-card p-8 rounded-3xl border border-white/5 hover:border-purple-500/30 transition-all group relative overflow-hidden"
+              onClick={() => navigate('/dhimas-detail')}
+              className="glass-card p-8 rounded-3xl border border-white/5 hover:border-purple-500/30 transition-all group cursor-pointer relative overflow-hidden"
               data-aos="fade-up"
             >
               <div className="flex flex-col md:flex-row gap-8 items-start">
