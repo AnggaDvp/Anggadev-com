@@ -102,7 +102,7 @@ const Education = ({ translations, currentLang }) => {
                 {/* Company Logo */}
                 <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 flex-shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform shadow-xl p-4 relative z-10">
                   <img 
-                    src="/Picture/dhimas.png" 
+                    src="/Picture/logo-dhimas.png" 
                     alt="PT Dhimas Mitra Internasional" 
                     className="w-full h-full object-contain"
                     onError={(e) => { e.target.src = 'https://ui-avatars.com/api/?name=DMI&background=a855f7&color=fff' }}
