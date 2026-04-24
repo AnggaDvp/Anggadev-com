@@ -123,7 +123,7 @@ const translations = {
     'exp-title': 'Work Experience',
     'exp-intern-title': 'Marketplace & Website Maintenance (Internship)',
     'exp-intern-company': 'PT Dhimas Mitra Internasional',
-    'exp-intern-desc': 'Responsible for marketplace management, website maintenance, and monitoring customer shopping activities to ensure smooth operations at dhimasmitra.co.id.',
+    'exp-intern-desc': 'Responsible for managing the marketplace, maintaining the website, and monitoring customer purchasing activities to ensure smooth operations at dhimasmitra.co.id.',
     'hero-subtitle': "I'm Bintang DWI Anggara. I don't just write code; I transform your business needs into efficient, structured, and data-driven operational systems.",
     'hero-cta': 'Start Collaboration',
     'hero-cv': 'Download CV',
