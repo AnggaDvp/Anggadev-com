@@ -34,12 +34,12 @@ Anggaporto/
 
 1. **Mengubah Gambar Profil**
    Gambar profil terintegrasi pada dua bagian: *Hero Section* (lingkaran) dan *About Section* (potret). 
-   - Pastikan gambar Anda diberi nama `profile.jpg` dan letakkan satu folder dengan `index.html`.
+   - Pastikan gambar Anda diberi nama `profile.jpg` and letakkan satu folder dengan `index.html`.
    - Atau, ubah atribut `src="profile.jpg"` pada baris `<img src="...">` di dalam `index.html` sesuai dengan nama gambar Anda.
 
 2. **Mengubah Warna Utama**
    Jika Anda ingin mengubah tema warna dari ungu (`purple-500`, `purple-600`) ke warna lain (misal: biru atau hijau), Anda bisa melakukan "Find & Replace" pada editor kode Anda:
-   - Cari kelas `purple-` dan ubah menjadi `blue-` atau warna Tailwind lainnya.
+   - Cari kelas `purple-` and ubah menjadi `blue-` atau warna Tailwind lainnya.
 
 3. **Menambah/Menghapus Proyek Baru**
    Untuk memodifikasi Proyek Unggulan, cari bagian dengan ID `<section id="proyek">`. 
@@ -56,3 +56,7 @@ Website ini sudah diuji untuk kompatibilitas dan performa pada:
 - **Browser**: Google Chrome, Mozilla Firefox, Microsoft Edge, Safari.
 - **Device**: Resolusi layar di atas 1024px (Desktop/Laptop), 768px (Tablet), dan 375px (Mobile/Smartphone).
 *Catatan: Custom cursor secara otomatis dinonaktifkan pada perangkat sentuh (Mobile/Tablet) untuk memastikan User Experience (UX) tetap optimal.*
+
+---
+# Anggadev-com
+Ini adalah website portofolio saya yang berfokus pengembangan website dan serta marketplace/marketing

@@ -22,7 +22,7 @@ const Footer = ({ translations, currentLang }) => {
           <div className="flex flex-col items-center md:items-start">
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Social</h4>
             <div className="flex space-x-4">
-              <a href="https://github.com/BINTANGDWIANGGARA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition">
+              <a href="https://github.com/AnggaDvp" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition">
                 <i className="fab fa-github text-xl"></i>
               </a>
               <a href="https://www.linkedin.com/in/bintang-dwi-anggara-938383382/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition">

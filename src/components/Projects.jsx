@@ -11,7 +11,7 @@ const Projects = ({ translations, currentLang }) => {
         : 'Web-based application to manage goods movement accurately. Simplifies monitoring of stock inflow and outflow in company warehouses in real-time.',
       image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
       category: 'Inventory',
-      github: 'https://github.com/BINTANGDWIANGGARA/warehouse-inventory-system',
+      github: 'https://github.com/AnggaDvp/warehouse-inventory-system',
       tech: [
         { name: 'Laravel', icon: 'fab fa-laravel', color: 'bg-purple-600' },
         { name: 'MySQL', icon: 'fas fa-database', color: 'bg-blue-600' }
@@ -25,7 +25,7 @@ const Projects = ({ translations, currentLang }) => {
         : 'Smart platform to monitor employee attendance in real-time. Simplifies the process of recording, recapitulation, and report management for HRD divisions.',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
       category: 'HR & Management',
-      github: 'https://github.com/BINTANGDWIANGGARA/digital-attendance-system',
+      github: 'https://github.com/AnggaDvp/digital-attendance-system',
       tech: [
         { name: 'PHP Native', icon: 'fab fa-php', color: 'bg-indigo-600' },
         { name: 'JavaScript', icon: 'fab fa-js', color: 'bg-yellow-500' }
@@ -39,7 +39,7 @@ const Projects = ({ translations, currentLang }) => {
         : 'Comprehensive system that helps in precise cash flow recording, integrated with automatic report generation for strategic decision-making.',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
       category: 'Finance',
-      github: 'https://github.com/BINTANGDWIANGGARA/financial-dashboard',
+      github: 'https://github.com/AnggaDvp/financial-dashboard',
       tech: [
         { name: 'Laravel', icon: 'fab fa-laravel', color: 'bg-purple-600' },
         { name: 'Excel Export', icon: 'fas fa-file-excel', color: 'bg-green-600' }
@@ -53,7 +53,7 @@ const Projects = ({ translations, currentLang }) => {
         : 'B2B platform for managing sales orders. Helps sales teams accelerate transaction processes and monitor order status.',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
       category: 'E-Commerce B2B',
-      github: 'https://github.com/BINTANGDWIANGGARA/sales-order-system',
+      github: 'https://github.com/AnggaDvp/sales-order-system',
       tech: [
         { name: 'PHP', icon: 'fab fa-php', color: 'bg-indigo-600' },
         { name: 'Sales API', icon: 'fas fa-shopping-cart', color: 'bg-orange-600' }
@@ -70,7 +70,7 @@ const Projects = ({ translations, currentLang }) => {
             <p className="text-gray-400 text-lg">{translations[currentLang]['projects-subtitle']}</p>
           </div>
           <div className="mt-6 md:mt-0">
-            <a href="https://github.com/BINTANGDWIANGGARA" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 flex items-center gap-2 font-bold transition group bg-purple-900/30 px-6 py-3 rounded-full">
+            <a href="https://github.com/AnggaDvp" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 flex items-center gap-2 font-bold transition group bg-purple-900/30 px-6 py-3 rounded-full">
               {translations[currentLang]['projects-github']} <i className="fab fa-github text-xl group-hover:rotate-12 transition"></i>
             </a>
           </div>
@@ -78,7 +78,7 @@ const Projects = ({ translations, currentLang }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-10">
           {projects.map((project, idx) => (
-            <article key={project.id} className="glass-card rounded-3xl overflow-hidden group relative flex flex-col border border-white/5 hover:border-purple-500/50 transition-all duration-500" data-aos="fade-up" data-aos-delay={100 * (idx + 1)}>
+            <article key={project.id} className="glass-card rounded-3xl overflow-hidden group relative flex flex-col" data-aos="fade-up" data-aos-delay={100 * (idx + 1)}>
               <div className="relative h-72 overflow-hidden">
                 <img src={project.image} alt={project.title} loading="lazy" className="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
@@ -96,7 +96,7 @@ const Projects = ({ translations, currentLang }) => {
                 </div>
               </div>
               
-              <div className="p-8 flex-1 flex flex-col bg-[#0a0a0a] relative">
+              <div className="p-8 flex-1 flex flex-col relative">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">{project.title}</h3>
                 <p className="text-gray-400 mb-8 text-sm leading-relaxed flex-1">{project.desc}</p>
@@ -104,7 +104,7 @@ const Projects = ({ translations, currentLang }) => {
                 <div className="flex gap-4 mt-auto">
                   <Link 
                     to={`/detail/${project.id}`}
-                    className="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-xl transition text-center text-sm shadow-lg shadow-purple-900/20"
+                    className="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-xl transition text-center text-sm shadow-lg shadow-purple-900/20 hover:shadow-purple-900/40 hover:-translate-y-0.5"
                   >
                     {currentLang === 'id' ? 'Detail Proyek' : 'Project Details'}
                   </Link>
@@ -112,7 +112,7 @@ const Projects = ({ translations, currentLang }) => {
                     href={project.github} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:border-purple-500 transition shadow-lg"
+                    className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-purple-600 hover:border-purple-500 transition-all duration-300 shadow-lg hover:shadow-purple-900/40 hover:-translate-y-0.5"
                   >
                     <i className="fab fa-github text-xl"></i>
                   </a>

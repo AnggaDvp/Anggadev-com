@@ -160,7 +160,7 @@ const BlogDetail = ({ translations, currentLang }) => {
                   <i className="fas fa-share-alt text-purple-500"></i> {currentLang === 'id' ? 'Bagikan Artikel' : 'Share Article'}
                 </h4>
                 <div className="flex gap-3">
-                  <a href="https://github.com/BINTANGDWIANGGARA" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-purple-600 hover:text-white transition shadow-sm">
+                  <a href="https://github.com/AnggaDvp" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-purple-600 hover:text-white transition shadow-sm">
                     <i className="fab fa-github"></i>
                   </a>
                   <a href="https://www.linkedin.com/in/bintang-dwi-anggara-938383382/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition shadow-sm">

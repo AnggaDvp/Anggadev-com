@@ -462,15 +462,7 @@ const TechDetail = ({ currentLang }) => {
               <p className="text-gray-400 leading-relaxed">
                 {tech.useCase[currentLang]}
               </p>
-              <div className="mt-8 pt-8 border-t border-purple-900/20">
-                <h4 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">
-                    {currentLang === 'id' ? 'Status Keahlian' : 'Proficiency Status'}
-                </h4>
-                <div className="w-full bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                    <div className="bg-gradient-to-r from-purple-600 to-indigo-500 h-full rounded-full w-[90%]"></div>
-                </div>
-                <p className="text-xs text-purple-400 mt-2 font-bold">Expert / Advanced</p>
-              </div>
+
             </div>
           </div>
 

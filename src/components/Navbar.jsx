@@ -72,7 +72,6 @@ const Navbar = ({ currentLang, toggleLanguage, translations }) => {
   const navLinks = [
     { href: '#hero', key: 'nav-home' },
     { href: '#tentang', key: 'nav-about' },
-    { href: '#keahlian', key: 'nav-skills' },
     { href: '#proyek', key: 'nav-projects' },
     { href: '#blog', key: 'nav-blog' },
     { href: '#kontak', key: 'nav-contact' },
@@ -177,7 +176,7 @@ const Navbar = ({ currentLang, toggleLanguage, translations }) => {
             <div className="p-10 text-center border-t border-purple-900/20">
               <p className="text-gray-500 text-sm mb-4">Connect with me</p>
               <div className="flex justify-center gap-6 text-2xl text-gray-400">
-                <a href="https://github.com/BINTANGDWIANGGARA" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><i className="fab fa-github"></i></a>
+                <a href="https://github.com/AnggaDvp" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><i className="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/bintang-dwi-anggara-938383382/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition"><i className="fab fa-linkedin-in"></i></a>
                 <a href="https://www.instagram.com/bgststarrr_/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition"><i className="fab fa-instagram"></i></a>
               </div>

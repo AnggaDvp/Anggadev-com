@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.2.4",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "aos": "^2.3.4",
     "font-awesome": "^4.7.0",
     "lucide-react": "^1.8.0",

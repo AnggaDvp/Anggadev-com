@@ -15,7 +15,7 @@ const ProjectDetail = ({ translations, currentLang }) => {
         : 'Web-based application to manage goods movement accurately. Simplifies monitoring of stock inflow and outflow in company warehouses in real-time and minimizes human error.',
       image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
       tech: ['Laravel', 'MySQL', 'JavaScript', 'Bootstrap'],
-      github: 'https://github.com/BINTANGDWIANGGARA/Mandev-project'
+      github: 'https://github.com/AnggaDvp/Mandev-project'
     },
     {
       id: 'sistem-absensi-digital',
@@ -26,7 +26,7 @@ const ProjectDetail = ({ translations, currentLang }) => {
         : 'Smart platform to monitor employee attendance in real-time. Simplifies the process of recording, recapitulation, and report management for HRD divisions.',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
       tech: ['PHP Native', 'JavaScript', 'MySQL', 'jQuery'],
-      github: 'https://github.com/BINTANGDWIANGGARA/Maskapai-Project-LSP'
+      github: 'https://github.com/AnggaDvp/Maskapai-Project-LSP'
     },
     {
       id: 'dashboard-keuangan',
@@ -37,7 +37,7 @@ const ProjectDetail = ({ translations, currentLang }) => {
         : 'Comprehensive system that helps in precise cash flow recording, integrated with automatic report generation to facilitate strategic leadership decision-making.',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
       tech: ['Laravel', 'MySQL', 'Excel Export', 'Chart.js'],
-      github: 'https://github.com/BINTANGDWIANGGARA/rekap_yuu'
+      github: 'https://github.com/AnggaDvp/rekap_yuu'
     },
     {
       id: 'sistem-sales-order',
@@ -48,7 +48,7 @@ const ProjectDetail = ({ translations, currentLang }) => {
         : 'B2B platform for managing sales orders. Helps sales teams accelerate transaction processes, monitor order status, and organize customer data in one place.',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
       tech: ['PHP', 'MySQL', 'Sales API', 'JavaScript'],
-      github: 'https://github.com/BINTANGDWIANGGARA/Anggaportofolio'
+      github: 'https://github.com/AnggaDvp/Anggaportofolio'
     }
   ];
 

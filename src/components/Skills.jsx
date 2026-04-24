@@ -3,29 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Skills = ({ translations, currentLang }) => {
   const navigate = useNavigate();
-  const skillsData = [
-    {
-      title: 'Frontend',
-      icon: 'fas fa-laptop-code',
-      color: 'purple',
-      skills: [
-        { name: 'React / Flutter', level: 85 },
-        { name: 'HTML / CSS / JS', level: 95 },
-      ],
-      tags: ['Tailwind CSS', 'Next.js']
-    },
-    {
-      title: 'Backend',
-      icon: 'fas fa-server',
-      color: 'blue',
-      skills: [
-        { name: 'Laravel / PHP', level: 90 },
-        { name: 'Node.js', level: 75 },
-      ],
-      tags: ['MySQL', 'Firebase']
-    }
-  ];
-
   const tools = [
     { 
       id: 'laravel',
@@ -179,49 +156,11 @@ const Skills = ({ translations, currentLang }) => {
           <p className="text-gray-400">{translations[currentLang]['skills-subtitle']}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {skillsData.map((category, idx) => (
-            <div key={idx} className="glass-card p-8 rounded-3xl border border-white/5 bg-white/5 backdrop-blur-sm" data-aos="fade-up" data-aos-delay={100 * (idx + 1)}>
-              <div className="flex items-center gap-4 mb-6">
-                <div className={`w-12 h-12 bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-400`}>
-                  <i className={`${category.icon} text-xl`}></i>
-                </div>
-                <h3 className="text-xl font-bold text-white">{category.title}</h3>
-              </div>
-              
-              <div className="space-y-4 mb-6">
-                {category.skills.map((skill, sIdx) => (
-                  <div key={sIdx}>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-sm font-medium text-gray-300">{skill.name}</span>
-                      <span className="text-sm font-medium text-purple-400">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                      <div 
-                        className="bg-gradient-to-r from-purple-600 to-indigo-500 h-full rounded-full transition-all duration-1000 ease-out" 
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex flex-wrap gap-2">
-                {category.tags.map((tag, tIdx) => (
-                  <span key={tIdx} className="px-3 py-1 bg-purple-900/20 text-purple-400 text-xs rounded-full border border-purple-900/30">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-        
         {/* Senjata Andalan Icons Section */}
-        <div className="mt-8" data-aos="fade-up" data-aos-delay="400">
-          <div className="glass-card p-8 rounded-3xl border border-white/5 bg-white/5 backdrop-blur-sm">
+        <div data-aos="fade-up">
+          <div className="glass-card p-8 rounded-3xl">
             <div className="flex items-center gap-4 mb-10">
-              <div className="w-12 h-12 bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-400">
+              <div className="w-12 h-12 bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-400 shadow-lg shadow-purple-900/20">
                 <i className="fas fa-layer-group text-xl"></i>
               </div>
               <h3 className="text-xl font-bold text-white">Senjata Andalan</h3>
@@ -232,9 +171,9 @@ const Skills = ({ translations, currentLang }) => {
                 <button 
                   key={idx} 
                   onClick={() => handleTechClick(tool.id)}
-                  className="group flex flex-col items-center gap-3 p-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-2"
+                  className="group flex flex-col items-center gap-3 p-4 rounded-2xl bg-white/5 hover:bg-purple-600/10 border border-white/5 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-900/20"
                 >
-                  <div className={`w-12 h-12 flex items-center justify-center text-3xl transition-transform duration-300 group-hover:scale-110 ${tool.color}`}>
+                  <div className={`w-12 h-12 flex items-center justify-center text-3xl transition-transform duration-300 group-hover:scale-110 group-hover:text-purple-400 ${tool.color}`}>
                     <i className={tool.icon}></i>
                   </div>
                   <span className="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">

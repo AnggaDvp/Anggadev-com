@@ -9,7 +9,7 @@ const About = ({ translations, currentLang }) => {
           <div className="w-full md:w-5/12" data-aos="fade-right">
             <div className="relative group h-full tilt-container">
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl blur opacity-20 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-              <div className="relative glass-card rounded-2xl p-3 h-full flex flex-col tilt-element bg-[#0a0a0a]">
+              <div className="relative glass-card rounded-2xl p-3 h-full flex flex-col tilt-element">
                 <div className="overflow-hidden rounded-xl relative">
                   <img 
                     src="/Picture/coding.jpg" 
@@ -43,6 +43,24 @@ const About = ({ translations, currentLang }) => {
                   {translations[currentLang]['about-quote']}
                 </p>
               </div>
+            </div>
+
+            {/* GitHub Stats */}
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <a href="https://github.com/AnggaDvp" target="_blank" rel="noopener noreferrer" className="block transform hover:-translate-y-1 transition duration-300">
+                <img 
+                  src="https://github-readme-stats.vercel.app/api?username=AnggaDvp&show_icons=true&theme=transparent&hide_border=true&title_color=a855f7&icon_color=a855f7&text_color=9ca3af&bg_color=00000000" 
+                  alt="GitHub Stats" 
+                  className="w-full h-auto"
+                />
+              </a>
+              <a href="https://github.com/AnggaDvp" target="_blank" rel="noopener noreferrer" className="block transform hover:-translate-y-1 transition duration-300">
+                <img 
+                  src="https://github-readme-streak-stats.herokuapp.com/?user=AnggaDvp&theme=transparent&hide_border=true&stroke=a855f7&ring=a855f7&fire=a855f7&currStreakNum=a855f7&sideLabels=9ca3af&dates=9ca3af" 
+                  alt="GitHub Streak" 
+                  className="w-full h-auto"
+                />
+              </a>
             </div>
           </div>
         </div>

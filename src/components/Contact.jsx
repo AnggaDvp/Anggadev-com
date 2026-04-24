@@ -63,11 +63,11 @@ const Contact = ({ translations, currentLang }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="space-y-8" data-aos="fade-right">
-            <div className="glass-card p-8 rounded-3xl border border-white/5 bg-white/5">
+            <div className="glass-card p-8 rounded-3xl">
               <h3 className="text-2xl font-bold text-white mb-6">{translations[currentLang]['contact-info-title']}</h3>
               <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-400">
+                <div className="flex items-center gap-4 group">
+                  <div className="w-12 h-12 bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300 shadow-lg shadow-purple-900/20">
                     <i className="fas fa-envelope"></i>
                   </div>
                   <div>
@@ -75,8 +75,8 @@ const Contact = ({ translations, currentLang }) => {
                     <p className="text-white font-medium">bintangdwianggara9@gmail.com</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-400">
+                <div className="flex items-center gap-4 group">
+                  <div className="w-12 h-12 bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300 shadow-lg shadow-purple-900/20">
                     <i className="fab fa-google text-xl"></i>
                   </div>
                   <div>
@@ -84,8 +84,8 @@ const Contact = ({ translations, currentLang }) => {
                     <p className="text-white font-medium">bintangdwianggara9@gmail.com</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-400">
+                <div className="flex items-center gap-4 group">
+                  <div className="w-12 h-12 bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300 shadow-lg shadow-purple-900/20">
                     <i className="fab fa-whatsapp text-xl"></i>
                   </div>
                   <div>
@@ -99,11 +99,11 @@ const Contact = ({ translations, currentLang }) => {
                 <p className="text-white font-bold mb-4">{translations[currentLang]['contact-social-title']}</p>
                 <div className="flex gap-4">
                   {[
-                    { platform: 'github', url: 'https://github.com/BINTANGDWIANGGARA' },
+                    { platform: 'github', url: 'https://github.com/AnggaDvp' },
                     { platform: 'linkedin', url: 'https://www.linkedin.com/in/bintang-dwi-anggara-938383382/' },
                     { platform: 'instagram', url: 'https://www.instagram.com/bgststarrr_/' }
                   ].map((social) => (
-                    <a key={social.platform} href={social.url} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-purple-600 hover:text-white transition">
+                    <a key={social.platform} href={social.url} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-purple-600 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-purple-900/40">
                       <i className={`fab fa-${social.platform}`}></i>
                     </a>
                   ))}
@@ -114,24 +114,24 @@ const Contact = ({ translations, currentLang }) => {
 
           {/* Contact Form */}
           <div data-aos="fade-left">
-            <form className="glass-card p-8 rounded-3xl space-y-6 border border-white/5 bg-white/5" onSubmit={(e) => e.preventDefault()}>
+            <form className="glass-card p-8 rounded-3xl space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">{translations[currentLang]['contact-form-name']}</label>
-                <input type="text" id="name" value={formData.name} onChange={handleChange} className="w-full px-4 py-3 rounded-xl bg-darkBg border border-gray-800 text-white focus:ring-2 focus:ring-purple-500 outline-none transition" placeholder={translations[currentLang]['contact-form-name-placeholder']} />
+                <input type="text" id="name" value={formData.name} onChange={handleChange} className="w-full px-4 py-3 rounded-xl outline-none transition" placeholder={translations[currentLang]['contact-form-name-placeholder']} />
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">{translations[currentLang]['contact-form-email']}</label>
-                <input type="email" id="email" value={formData.email} onChange={handleChange} className="w-full px-4 py-3 rounded-xl bg-darkBg border border-gray-800 text-white focus:ring-2 focus:ring-purple-500 outline-none transition" placeholder={translations[currentLang]['contact-form-email-placeholder']} />
+                <input type="email" id="email" value={formData.email} onChange={handleChange} className="w-full px-4 py-3 rounded-xl outline-none transition" placeholder={translations[currentLang]['contact-form-email-placeholder']} />
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">{translations[currentLang]['contact-form-message']}</label>
-                <textarea id="message" value={formData.message} onChange={handleChange} rows="4" className="w-full px-4 py-3 rounded-xl bg-darkBg border border-gray-800 text-white focus:ring-2 focus:ring-purple-500 outline-none transition resize-none" placeholder={translations[currentLang]['contact-form-message-placeholder']}></textarea>
+                <textarea id="message" value={formData.message} onChange={handleChange} rows="4" className="w-full px-4 py-3 rounded-xl outline-none transition resize-none" placeholder={translations[currentLang]['contact-form-message-placeholder']}></textarea>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <button type="button" onClick={handleWhatsApp} className="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
+                <button type="button" onClick={handleWhatsApp} className="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-green-900/20 hover:shadow-green-900/40 hover:-translate-y-0.5">
                   <i className="fab fa-whatsapp text-lg"></i> {translations[currentLang]['contact-form-wa']}
                 </button>
-                <button type="button" onClick={handleEmail} className="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
+                <button type="button" onClick={handleEmail} className="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-purple-900/20 hover:shadow-purple-900/40 hover:-translate-y-0.5">
                   <i className="fas fa-envelope"></i> {translations[currentLang]['contact-form-email-btn']}
                 </button>
               </div>
