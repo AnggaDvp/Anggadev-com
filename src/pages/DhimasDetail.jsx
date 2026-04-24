@@ -68,20 +68,6 @@ const DhimasDetail = ({ translations, currentLang }) => {
             </div>
           </div>
 
-          {/* Activity Photo */}
-          <div className="mt-12">
-            <h3 className="text-2xl font-bold text-white mb-6">
-              {currentLang === 'id' ? 'Foto Kegiatan' : 'Activity Photo'}
-            </h3>
-            <div className="rounded-xl overflow-hidden border border-white/10 shadow-xl">
-              <img 
-                src="/Picture/foto-kegiatan.jpg" 
-                alt="Foto Kegiatan Magang PT Dhimas Mitra Internasional" 
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-
           {/* Decorative Background Glow */}
           <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-purple-600/10 rounded-full blur-[100px] pointer-events-none"></div>
         </div>
