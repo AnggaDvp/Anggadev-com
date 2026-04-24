@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -159,6 +160,7 @@ function App() {
         </Routes>
 
         <Footer translations={translations} currentLang={currentLang} />
+        <SpeedInsights />
       </div>
     </Router>
   );
