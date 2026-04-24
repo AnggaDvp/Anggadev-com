@@ -72,6 +72,7 @@ const Navbar = ({ currentLang, toggleLanguage, translations }) => {
   const navLinks = [
     { href: '#hero', key: 'nav-home' },
     { href: '#tentang', key: 'nav-about' },
+    { href: '#pendidikan', key: 'nav-education' },
     { href: '#proyek', key: 'nav-projects' },
     { href: '#blog', key: 'nav-blog' },
     { href: '#kontak', key: 'nav-contact' },
@@ -141,44 +142,61 @@ const Navbar = ({ currentLang, toggleLanguage, translations }) => {
         </div>
 
         <div
-          className={`md:hidden fixed inset-0 bg-black/95 backdrop-blur-2xl z-40 transform ${
-            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          } transition-transform duration-500 ease-in-out`}
+          className={`md:hidden fixed inset-0 z-40 transition-all duration-500 ${
+            isMenuOpen ? 'visible' : 'invisible'
+          }`}
         >
-          <div className="flex flex-col h-full pt-20">
-            <div className="flex justify-between items-center h-20 px-4 absolute top-0 w-full border-b border-purple-900/30">
-              <Link to="/" onClick={handleLogoClick} aria-label="Beranda" className="font-bold text-2xl tracking-tight text-white">
-                Angga<span className="text-purple-500">.dev</span>
-              </Link>
-              <button
-                onClick={toggleMenu}
-                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400"
-                aria-label="Close Menu"
-              >
-                <i className="fas fa-times"></i>
-              </button>
-            </div>
-            <div className="flex flex-col items-center justify-center flex-1 space-y-8 px-4">
-              {navLinks.map((link, idx) => (
-                <a
-                  key={link.key}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  style={{ transitionDelay: `${idx * 50}ms` }}
-                  className={`text-3xl font-bold text-white hover:text-purple-500 transition-all transform ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+          {/* Backdrop Overlay */}
+          <div 
+            className={`absolute inset-0 bg-black/60 backdrop-blur-md transition-opacity duration-500 ${
+              isMenuOpen ? 'opacity-100' : 'opacity-0'
+            }`}
+            onClick={toggleMenu}
+          />
+          
+          {/* Menu Content */}
+          <div
+            className={`absolute right-0 top-0 bottom-0 w-[80%] max-w-sm bg-[#050505]/95 backdrop-blur-2xl border-l border-purple-900/30 transform transition-transform duration-500 ease-in-out ${
+              isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            }`}
+          >
+            <div className="flex flex-col h-full">
+              <div className="flex justify-between items-center h-20 px-6 border-b border-purple-900/30">
+                <Link to="/" onClick={handleLogoClick} className="font-bold text-2xl text-white">
+                  Angga<span className="text-purple-500">.dev</span>
+                </Link>
+                <button
+                  onClick={toggleMenu}
+                  className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-400 hover:text-white transition"
                 >
-                  {translations[currentLang][link.key]}
-                </a>
-              ))}
-            </div>
-            
-            {/* Mobile Footer in Menu */}
-            <div className="p-10 text-center border-t border-purple-900/20">
-              <p className="text-gray-500 text-sm mb-4">Connect with me</p>
-              <div className="flex justify-center gap-6 text-2xl text-gray-400">
-                <a href="https://github.com/AnggaDvp" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><i className="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/bintang-dwi-anggara-938383382/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition"><i className="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/bgststarrr_/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition"><i className="fab fa-instagram"></i></a>
+                  <i className="fas fa-times"></i>
+                </button>
+              </div>
+              
+              <div className="flex flex-col items-start justify-center flex-1 space-y-6 px-8">
+                {navLinks.map((link, idx) => (
+                  <a
+                    key={link.key}
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    style={{ transitionDelay: `${idx * 50}ms` }}
+                    className={`text-2xl font-bold text-white hover:text-purple-500 transition-all transform ${
+                      isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
+                    }`}
+                  >
+                    <span className="text-purple-500/50 text-sm mr-4 font-mono">0{idx + 1}.</span>
+                    {translations[currentLang][link.key]}
+                  </a>
+                ))}
+              </div>
+              
+              <div className="p-8 border-t border-purple-900/20 bg-purple-900/5">
+                <p className="text-gray-500 text-xs uppercase tracking-widest mb-6 font-semibold">Connect</p>
+                <div className="flex gap-6 text-2xl text-gray-400">
+                  <a href="https://github.com/AnggaDvp" target="_blank" rel="noopener noreferrer" className="hover:text-white transition transform hover:-translate-y-1"><i className="fab fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/bintang-dwi-anggara-938383382/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-500 transition transform hover:-translate-y-1"><i className="fab fa-linkedin-in"></i></a>
+                  <a href="https://www.instagram.com/bgststarrr_/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition transform hover:-translate-y-1"><i className="fab fa-instagram"></i></a>
+                </div>
               </div>
             </div>
           </div>

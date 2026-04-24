@@ -12,18 +12,18 @@ const Hero = ({ translations, currentLang }) => {
       {/* Profile Image */}
       <div className="tilt-container mb-8 relative group" data-aos="zoom-in" data-aos-duration="800">
         {/* Floating Icons Around Profile */}
-        <div className="absolute -top-4 -left-4 w-12 h-12 bg-gray-800 rounded-2xl shadow-xl flex items-center justify-center text-purple-400 animate-float-slow z-10 border border-purple-500/20">
-          <i className="fab fa-react text-2xl"></i>
+        <div className="absolute -top-4 -left-4 w-10 h-10 md:w-12 md:h-12 bg-gray-800 rounded-2xl shadow-xl flex items-center justify-center text-purple-400 animate-float-slow z-10 border border-purple-500/20">
+          <i className="fab fa-react text-xl md:text-2xl"></i>
         </div>
-        <div className="absolute top-1/2 -right-6 w-10 h-10 bg-gray-800 rounded-xl shadow-xl flex items-center justify-center text-purple-400 animate-float-fast z-10 border border-purple-500/20">
-          <i className="fab fa-php text-xl"></i>
+        <div className="absolute top-1/2 -right-4 md:-right-6 w-8 h-8 md:w-10 md:h-10 bg-gray-800 rounded-xl shadow-xl flex items-center justify-center text-purple-400 animate-float-fast z-10 border border-purple-500/20">
+          <i className="fab fa-php text-lg md:text-xl"></i>
         </div>
-        <div className="absolute -bottom-2 -left-2 w-10 h-10 bg-gray-800 rounded-xl shadow-xl flex items-center justify-center text-purple-400 animate-float-slow z-10 border border-purple-500/20">
-          <i className="fab fa-laravel text-xl"></i>
+        <div className="absolute -bottom-2 -left-2 w-8 h-8 md:w-10 md:h-10 bg-gray-800 rounded-xl shadow-xl flex items-center justify-center text-purple-400 animate-float-slow z-10 border border-purple-500/20">
+          <i className="fab fa-laravel text-lg md:text-xl"></i>
         </div>
 
         <div className="absolute -inset-4 bg-gradient-to-r from-purple-600/20 via-pink-500/20 to-indigo-600/20 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
-        <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-full p-1.5 bg-gradient-to-tr from-purple-500 via-indigo-500 to-purple-500 shadow-2xl tilt-element overflow-hidden">
+        <div className="relative w-36 h-36 md:w-52 md:h-52 rounded-full p-1.5 bg-gradient-to-tr from-purple-500 via-indigo-500 to-purple-500 shadow-2xl tilt-element overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 to-transparent animate-pulse"></div>
           <img 
             src="/Picture/profil.png" 

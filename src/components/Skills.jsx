@@ -114,21 +114,21 @@ const Skills = ({ translations, currentLang }) => {
               <h3 className="text-xl font-bold text-white">Senjata Andalan</h3>
             </div>
             
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
               {tools.map((tool, idx) => (
                 <button 
                   key={idx} 
                   onClick={() => handleTechClick(tool.id)}
-                  className="group flex flex-col items-center gap-3 p-4 rounded-2xl bg-white/5 hover:bg-purple-600/10 border border-white/5 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-900/20"
+                  className="group flex flex-col items-center gap-2 md:gap-3 p-3 md:p-4 rounded-2xl bg-white/5 hover:bg-purple-600/10 border border-white/5 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-900/20"
                 >
-                  <div className={`w-12 h-12 flex items-center justify-center text-3xl transition-transform duration-300 group-hover:scale-110 group-hover:text-purple-400 ${tool.color}`}>
+                  <div className={`w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-2xl md:text-3xl transition-transform duration-300 group-hover:scale-110 group-hover:text-purple-400 ${tool.color}`}>
                     <i className={tool.icon}></i>
                   </div>
                   <div className="text-center">
-                    <span className="block text-xs font-bold text-white transition-colors">
+                    <span className="block text-[10px] md:text-xs font-bold text-white transition-colors">
                       {tool.name}
                     </span>
-                    <span className="block text-[10px] text-gray-500 group-hover:text-purple-400 transition-colors mt-1">
+                    <span className="block text-[8px] md:text-[10px] text-gray-500 group-hover:text-purple-400 transition-colors mt-0.5 md:mt-1">
                       {tool.tagline}
                     </span>
                   </div>

@@ -37,6 +37,7 @@ import Cursor from './components/Cursor';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Education from './components/Education';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Blog from './components/Blog';
@@ -45,11 +46,13 @@ import Footer from './components/Footer';
 import ProjectDetail from './pages/ProjectDetail';
 import BlogDetail from './pages/BlogDetail';
 import TechDetail from './pages/TechDetail';
+import EducationDetail from './pages/EducationDetail';
 
 const translations = {
   'id': {
     'nav-home': 'Beranda',
     'nav-about': 'Tentang',
+    'nav-education': 'Pendidikan',
     'nav-skills': 'Keahlian',
     'nav-projects': 'Proyek',
     'nav-blog': 'Blog',
@@ -67,6 +70,17 @@ const translations = {
     'about-name': 'Bintang DWI Anggara',
     'about-role': 'Fullstack Developer & Digital Strategist',
     'about-image-alt': 'Potret Bintang DWI Anggara',
+    'about-education-title': 'Pendidikan',
+    'about-school-name': 'SMKN 1 Jakarta',
+    'about-school-short': 'Sekolah teknik tertua di Jakarta yang didirikan sejak tahun 1906.',
+    'about-school-desc': 'Sekolah Menengah Kejuruan Negeri 1 Jakarta adalah sekolah teknik tertua di Jakarta, didirikan pada tahun 1906 dengan nama "KONING KLIKE WILHELMINA SCHOOL" (KWS). Sekolah ini memiliki sejarah panjang dalam mencetak tenaga teknik profesional sejak masa Hindia Belanda hingga kini.',
+    'about-school-link': 'Kunjungi Website SMKN 1 Jakarta',
+    'about-major-name': 'Rekayasa Perangkat Lunak (RPL)',
+    'about-major-short': 'Bidang profesi yang mendalami pengembangan perangkat lunak.',
+    'about-major-desc': 'Bidang profesi yang mendalami cara-cara pengembangan perangkat lunak termasuk pembuatan, pemeliharaan, manajemen organisasi pengembanganan perangkat lunak dan manajemen kualitas.',
+    'about-read-more': 'Selengkapnya',
+    'about-read-less': 'Tutup',
+    'common-back': 'Kembali',
     'skills-title': 'Senjata Andalan',
     'skills-subtitle': 'Kombinasi teknologi yang saya gunakan untuk mewujudkan ide menjadi kenyataan.',
     'projects-title': 'Proyek Unggulan',
@@ -96,6 +110,7 @@ const translations = {
   'en': {
     'nav-home': 'Home',
     'nav-about': 'About',
+    'nav-education': 'Education',
     'nav-skills': 'Skills',
     'nav-projects': 'Projects',
     'nav-blog': 'Blog',
@@ -113,6 +128,17 @@ const translations = {
     'about-name': 'Bintang DWI Anggara',
     'about-role': 'Fullstack Developer & Digital Strategist',
     'about-image-alt': 'Portrait of Bintang DWI Anggara',
+    'about-education-title': 'Education',
+    'about-school-name': 'SMKN 1 Jakarta',
+    'about-school-short': 'The oldest technical vocational school in Jakarta, founded in 1906.',
+    'about-school-desc': 'SMKN 1 Jakarta is the oldest technical vocational school in Jakarta, founded in 1906 as "KONING KLIKE WILHELMINA SCHOOL" (KWS). It has a long history of producing professional technical personnel since the Dutch East Indies era until today.',
+    'about-school-link': 'Visit SMKN 1 Jakarta Website',
+    'about-major-name': 'Software Engineering (RPL)',
+    'about-major-short': 'A professional field focusing on software development.',
+    'about-major-desc': 'A professional field focusing on software development methods, including creation, maintenance, quality management, and development organization.',
+    'about-read-more': 'Read More',
+    'about-read-less': 'Show Less',
+    'common-back': 'Back',
     'skills-title': 'Main Weaponry',
     'skills-subtitle': 'The technology combination I use to turn ideas into reality.',
     'projects-title': 'Featured Projects',
@@ -163,6 +189,7 @@ function App() {
             <main>
               <Hero translations={translations} currentLang={currentLang} />
               <About translations={translations} currentLang={currentLang} />
+              <Education translations={translations} currentLang={currentLang} />
               <Skills translations={translations} currentLang={currentLang} />
               <Projects translations={translations} currentLang={currentLang} />
               <Blog translations={translations} currentLang={currentLang} />
@@ -172,6 +199,7 @@ function App() {
           <Route path="/detail/:id" element={<ProjectDetail translations={translations} currentLang={currentLang} />} />
           <Route path="/blog/:id" element={<BlogDetail translations={translations} currentLang={currentLang} />} />
           <Route path="/tech/:id" element={<TechDetail currentLang={currentLang} />} />
+          <Route path="/education" element={<EducationDetail translations={translations} currentLang={currentLang} />} />
         </Routes>
 
         <Footer translations={translations} currentLang={currentLang} />
