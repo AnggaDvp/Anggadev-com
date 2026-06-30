@@ -48,6 +48,7 @@ import BlogDetail from './pages/BlogDetail';
 import TechDetail from './pages/TechDetail';
 import EducationDetail from './pages/EducationDetail';
 import DhimasDetail from './pages/DhimasDetail';
+import Kok4Detail from './pages/Kok4Detail';
 
 const translations = {
   'id': {
@@ -62,6 +63,9 @@ const translations = {
     'exp-intern-title': 'Marketplace & Website Maintenance (Magang)',
     'exp-intern-company': 'PT Dhimas Mitra Internasional',
     'exp-intern-desc': 'Bertanggung jawab dalam pengelolaan marketplace, pemeliharaan website, serta memantau aktivitas belanja pelanggan untuk memastikan operasional berjalan lancar di dhimasmitra.co.id.',
+    'exp-kok4-title': 'Kolaborasi Brand Fashion',
+    'exp-kok4-company': 'KOK4INSTUDIO',
+    'exp-kok4-desc': 'Kolaborasi dalam pengembangan dan pengelolaan brand fashion KOK4INSTUDIO, fokus pada kualitas produk, desain, dan strategi digital.',
     'hero-subtitle': 'Saya Bintang DWI Anggara. Saya tidak sekadar menulis kode, saya mengubah kebutuhan bisnis Anda menjadi sistem operasional yang efisien, terstruktur, dan berbasis data.',
     'hero-cta': 'Mulai Kolaborasi',
     'hero-cv': 'Download CV',
@@ -124,6 +128,9 @@ const translations = {
     'exp-intern-title': 'Marketplace & Website Maintenance (Internship)',
     'exp-intern-company': 'PT Dhimas Mitra Internasional',
     'exp-intern-desc': 'Responsible for managing the marketplace, maintaining the website, and monitoring customer purchasing activities to ensure smooth operations at dhimasmitra.co.id.',
+    'exp-kok4-title': 'Fashion Brand Collaboration',
+    'exp-kok4-company': 'KOK4INSTUDIO',
+    'exp-kok4-desc': 'Collaboration in developing and managing KOK4INSTUDIO fashion brand, focusing on product quality, design, and digital strategy.',
     'hero-subtitle': "I'm Bintang DWI Anggara. I don't just write code; I transform your business needs into efficient, structured, and data-driven operational systems.",
     'hero-cta': 'Start Collaboration',
     'hero-cv': 'Download CV',
@@ -210,6 +217,7 @@ function App() {
           <Route path="/tech/:id" element={<TechDetail currentLang={currentLang} />} />
           <Route path="/education" element={<EducationDetail translations={translations} currentLang={currentLang} />} />
           <Route path="/dhimas-detail" element={<DhimasDetail translations={translations} currentLang={currentLang} />} />
+          <Route path="/kok4-detail" element={<Kok4Detail translations={translations} currentLang={currentLang} />} />
         </Routes>
 
         <Footer translations={translations} currentLang={currentLang} />
