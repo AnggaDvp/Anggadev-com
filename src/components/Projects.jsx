@@ -4,6 +4,20 @@ import { Link } from 'react-router-dom';
 const Projects = ({ translations, currentLang }) => {
   const projects = [
     {
+      id: 'kok4instudio',
+      title: 'KOK4INSTUDIO',
+      desc: currentLang === 'id' 
+        ? 'Brand fashion authentic yang fokus pada kualitas dan desain unik. Menghadirkan produk streetwear dan custom apparel dengan identitas khas.'
+        : 'Authentic fashion brand focusing on quality and unique designs. Presenting streetwear and custom apparel with distinctive identity.',
+      image: '/Picture/Page01.png',
+      category: 'Fashion',
+      github: 'https://kok4instudio.vercel.app',
+      tech: [
+        { name: 'Next.js', icon: 'fab fa-react', color: 'bg-cyan-600' },
+        { name: 'Vercel', icon: 'fas fa-rocket', color: 'bg-white text-black' }
+      ]
+    },
+    {
       id: 'sistem-stok-gudang',
       title: currentLang === 'id' ? 'Sistem Stok Gudang' : 'Warehouse Inventory System',
       desc: currentLang === 'id' 
