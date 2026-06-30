@@ -7,6 +7,23 @@ const ProjectDetail = ({ translations, currentLang }) => {
   
   const projectsData = [
     {
+      id: 'kok4instudio',
+      title: 'KOK4INSTUDIO',
+      category: 'Fashion Brand',
+      description: currentLang === 'id' 
+        ? 'Brand fashion authentic yang fokus pada kualitas dan desain unik. Menghadirkan produk streetwear dan custom apparel dengan identitas khas. Project ini sudah siap deployment ke Vercel.'
+        : 'Authentic fashion brand focusing on quality and unique designs. Presenting streetwear and custom apparel with distinctive identity. This project is ready for deployment to Vercel.',
+      image: '/Picture/Page01.png',
+      tech: ['Vite', 'Tailwind CSS', 'React', 'Vercel'],
+      github: 'https://kok4instudio.vercel.app',
+      extra: {
+        framework: 'Vite 4.5.14',
+        deployment: 'Vercel',
+        buildTime: '17.85 seconds',
+        bundleSize: '~46 KB (gzipped)'
+      }
+    },
+    {
       id: 'sistem-stok-gudang',
       title: 'Sistem Stok Gudang',
       category: 'Inventory',
@@ -114,14 +131,40 @@ const ProjectDetail = ({ translations, currentLang }) => {
 
             <div className="glass-card rounded-2xl p-8 bg-white/5 border border-purple-900/20" data-aos="fade-left">
               <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                <i className="fab fa-github text-purple-500"></i> {currentLang === 'id' ? 'Tautan Kode' : 'Code Links'}
+                <i className="fas fa-link text-purple-500"></i> {currentLang === 'id' ? 'Tautan Proyek' : 'Project Links'}
               </h3>
               <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 bg-purple-600 hover:bg-purple-700 text-white rounded-xl transition font-bold group shadow-lg shadow-purple-900/20">
-                <span>GitHub Repository</span>
+                <span>{project.id === 'kok4instudio' ? (currentLang === 'id' ? 'Kunjungi Website' : 'Visit Website') : 'GitHub Repository'}</span>
                 <i className="fas fa-external-link-alt group-hover:rotate-12 transition"></i>
               </a>
             </div>
           </div>
+
+          {project.extra && (
+            <div className="glass-card rounded-2xl p-8 bg-white/5 border border-purple-900/20 mb-12" data-aos="fade-up">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                <i className="fas fa-rocket text-purple-500"></i> {currentLang === 'id' ? 'Detail Deployment' : 'Deployment Details'}
+              </h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="p-4 bg-purple-900/20 rounded-xl border border-purple-900/30">
+                  <p className="text-gray-400 text-sm mb-1">{currentLang === 'id' ? 'Framework' : 'Framework'}</p>
+                  <p className="text-white font-bold">{project.extra.framework}</p>
+                </div>
+                <div className="p-4 bg-purple-900/20 rounded-xl border border-purple-900/30">
+                  <p className="text-gray-400 text-sm mb-1">{currentLang === 'id' ? 'Hosting' : 'Hosting'}</p>
+                  <p className="text-white font-bold">{project.extra.deployment}</p>
+                </div>
+                <div className="p-4 bg-purple-900/20 rounded-xl border border-purple-900/30">
+                  <p className="text-gray-400 text-sm mb-1">{currentLang === 'id' ? 'Waktu Build' : 'Build Time'}</p>
+                  <p className="text-white font-bold">{project.extra.buildTime}</p>
+                </div>
+                <div className="p-4 bg-purple-900/20 rounded-xl border border-purple-900/30">
+                  <p className="text-gray-400 text-sm mb-1">{currentLang === 'id' ? 'Ukuran Bundle' : 'Bundle Size'}</p>
+                  <p className="text-white font-bold">{project.extra.bundleSize}</p>
+                </div>
+              </div>
+            </div>
+          )}
 
           <div className="text-center" data-aos="fade-up">
             <Link to="/" className="inline-flex items-center gap-2 text-purple-400 font-bold hover:gap-4 transition-all">
